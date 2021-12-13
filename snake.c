@@ -54,7 +54,7 @@ const uint_8 snakeHeightPixels = 4;
 //  Image data for game
 // 
 
-const uint_8 gameBitmaps =
+const uint_8 gameBitmaps[] =
 {
 	0x07, 0xFC, 0x00, 0xC0, 0x07, 0x00, 0x07, 0x03, 0xFE, //      #########          ##           ###             ###      ######### 
 	0x0F, 0x78, 0x01, 0xC0, 0x03, 0x80, 0x07, 0x01, 0x87, //     #### ####          ###            ###            ###       ##    ###
