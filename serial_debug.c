@@ -38,6 +38,7 @@ static void serial_debug_init_uart(void)
     EUSCI_A0-> IE |= EUSCI_A_IE_RXIE;
 
     NVIC_EnableIRQ(EUSCIA0_IRQn);
+    NVIC_SetPriority(EUSCIA0_IRQn, 3);
 
     // Prime the pump -- ADD CODE
     EUSCI_A0->TXBUF = 0;

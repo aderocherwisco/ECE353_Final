@@ -43,12 +43,17 @@
  */
 int main(void)
 {
-    WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;     // stop watchdog timer
+    WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;    // stop watchdog timer
 
-   // blink_led1_hw_init();
+
+
     i2c_init();
     opt3001_init();
     serial_debug_init();
+    ece353_ADC14_PS2_XY();
+    __enable_irq();
+
+
 
 
     printf("\n\r");
@@ -59,43 +64,52 @@ int main(void)
 
     Queue_Game = xQueueCreate(10,sizeof(uint32_t));
 
-        xTaskCreate
-        (   Task_Game,
-            "Task_Game",
-            configMINIMAL_STACK_SIZE,
-            NULL,
-            1,
-            &Task_Game_Handle
-        );
+    xTaskCreate
+    (   Task_Game_Timer,
+        "Task_Game_Timer",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        1,
+        &Task_Game_Timer_Handle
+    );
 
-        xTaskCreate
-        (   Task_Joystick_Timer,
-            "Task_Joystick_Timer",
-            configMINIMAL_STACK_SIZE,
-            NULL,
-            2,
-            &Task_Joystick_Timer_Handle
-        );
+    xTaskCreate
+    (   Task_Game,
+        "Task_Game",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        2,
+        &Task_Game_Handle
+    );
 
-        xTaskCreate
-        (   Task_Joystick_Bottom_Half,
-            "Task_Joystick",
-            configMINIMAL_STACK_SIZE,
-            NULL,
-            3,
-            &Task_Joystick_Bottom_Half_Handle
-        );
+    xTaskCreate
+    (   Task_Joystick_Timer,
+        "Task_Joystick_Timer",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        3,
+        &Task_Joystick_Timer_Handle
+    );
+
+    xTaskCreate
+    (   Task_Joystick_Bottom_Half,
+        "Task_Joystick",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        4,
+        &Task_Joystick_Bottom_Half_Handle
+    );
 
 
         /* Start the FreeRTOS scheduler */
         vTaskStartScheduler();
     while(1){
-         unsigned long int lux = opt3001_read_lux();
+        /* unsigned long int lux = opt3001_read_lux();
          char buffer[50];
          ltoa(lux,buffer, 10);
          printf("Light Level: ");
          printf(buffer);
-         printf("\n\r");
+         printf("\n\r");*/
     };
     return (0);
 }

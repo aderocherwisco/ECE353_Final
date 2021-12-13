@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 /* RTOS header files */
 #include <FreeRTOS.h>
 #include <task.h>
@@ -25,6 +26,7 @@
 
 /* ECE353 Includes */
 
+#include <ece353.h>
 #include <i2c.h>
 #include <light_sensor.h>
 #include <serial_debug.h>
