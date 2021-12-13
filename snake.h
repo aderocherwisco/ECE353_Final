@@ -7,3 +7,8 @@ extern const uint_8 welcomeHeightPixels;
 extern const uint_8 snakeBitmaps;
 extern const uint_8 snakeWidthPixels;
 extern const uint_8 snakeHeightPixels;
+
+// Bitmap info for game
+extern const uint_8 gameBitmaps;
+extern const uint_8 gameWidthPixels;
+extern const uint_8 gameHeightPixels;
