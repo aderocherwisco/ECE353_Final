@@ -3,7 +3,7 @@
 //  Image data for snake
 // 
 
-const uint_8 snakeBitmaps =
+const uint_8 snakeBitmaps[] =
 {
 	0x20, //   #    
 	0x70, //  ###   
