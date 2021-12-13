@@ -1,3 +1,4 @@
+#include <snake.h>
 // 
 //  Image data for snake
 // 
