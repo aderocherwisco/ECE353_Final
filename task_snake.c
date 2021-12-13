@@ -48,13 +48,13 @@ void welcome_message(void)
 }
 
 /******************************************************************************
- * This task manages the movement of the logo. The joystick task or the
+ * This task manages the movement of the snake. The joystick task or the
  * console task can send messages to QUEUE_LEN
  ******************************************************************************/
 
 void Task_Snake(void *pvParameters)
 {
-    LOGO_MSG_t msg;
+    SNAKE_MSG_t msg;
     uint8_t x = 67;
     uint8_t y = 67;
 
