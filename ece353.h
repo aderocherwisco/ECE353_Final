@@ -1,5 +1,15 @@
+/*
+ * ece353.h
+ *
+ *  Created on: Dec 13, 2021
+ *      Author: Aidan Derocher
+*/
+
+
 #ifndef __ECE353_H__
 #define __ECE353_H__
+
+
 
 #include <stdbool.h>
 #include <stdint.h>

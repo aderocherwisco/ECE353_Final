@@ -1,9 +1,9 @@
 /*
- * task_console.h
+ * game.h
  *
- *  Created on: Oct 21, 2020
- *      Author: Joe Krachey
- */
+ *  Created on: Dec 13, 2021
+ *      Author: Aidan Derocher
+*/
 
 #ifndef GAME_H_
 #define GAME_H_
@@ -25,7 +25,7 @@ extern volatile int oldheadx;
 extern volatile int oldheady;
 
 /******************************************************************************
-* Task used to print out messages to the console
+* Tasks used to run main game logic
 ******************************************************************************/
 void Task_Game(void *pvParameters);
 void Task_Game_Timer(void *pvParameters);

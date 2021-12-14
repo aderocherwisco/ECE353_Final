@@ -34,6 +34,13 @@
  *  ======== main_freertos.c ========
  */
 
+/*
+ * main.c
+ *
+ *  Created on: Dec 13, 2021
+ *      Author: Aidan Derocher
+*/
+
 
 #include <main.h>
 

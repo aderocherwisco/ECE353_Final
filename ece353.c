@@ -1,5 +1,13 @@
 #include "ece353.h"
 
+/*
+ * ece353.c
+ *
+ *  Created on: Dec 13, 2021
+ *      Author: Aidan Derocher
+*/
+
+
 /***************************************************
 *Initialize hardware resources used to control LED1
 ***************************************************/
