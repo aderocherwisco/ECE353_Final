@@ -17,6 +17,10 @@ extern TaskHandle_t Task_Joystick_Handle;
 extern TaskHandle_t Task_Joystick_Timer_Handle;
 extern TaskHandle_t Task_Joystick_Bottom_Half_Handle;
 
+extern volatile bool shook;
+
+
+
 typedef enum {
     JOYSTICK_DIR_CENTER,
     JOYSTICK_DIR_LEFT,

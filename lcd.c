@@ -7,6 +7,8 @@
 
 #include "lcd.h"
 
+
+
 /* ****************************************************************************
  * Used to configure the 5 pins that control the LCD interface on the MKII.
  *
@@ -351,4 +353,6 @@ void lcd_draw_image(uint16_t x, uint16_t y, uint16_t image_width_pixels,
         }
     }
 }
+
+
 

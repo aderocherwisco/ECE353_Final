@@ -4,7 +4,7 @@
 //  Image data for welcome
 // 
 
-const uint_8 welcomeBitmaps[] =
+const uint8_t welcomeBitmaps[] =
 {
 	0x8C, 0x27, 0x88, 0x1E, 0x1E, 0x18, 0x31, 0xE0, 0x7F, 0x1E, 0x00, // #   ##    #  ####   #      ####    ####    ##     ##   ####      #######   ####  
 	0x84, 0x44, 0x08, 0x20, 0x21, 0x18, 0x31, 0x00, 0x08, 0x23, 0x00, // #    #   #   #      #     #       #    #   ##     ##   #            #     #   ## 
@@ -30,15 +30,15 @@ const uint_8 welcomeBitmaps[] =
 };
 
 // Bitmap sizes for welcome
-const uint_8 welcomeWidthPixels = 81;
-const uint_8 welcomeHeightPixels = 21;
+const uint8_t welcomeWidthPixels = 81;
+const uint8_t welcomeHeightPixels = 21;
 
 
 // 
 //  Image data for snake
 // 
 
-const uint_8 snakeBitmaps[] =
+const uint8_t snakeBitmaps[] =
 {
 	0xF0, // ####
 	0xF0, // ####
@@ -47,14 +47,14 @@ const uint_8 snakeBitmaps[] =
 };
 
 // Bitmap sizes for snake
-const uint_8 snakeWidthPixels = 4;
-const uint_8 snakeHeightPixels = 4;
+const uint8_t snakeWidthPixels = 4;
+const uint8_t snakeHeightPixels = 4;
 
 // 
 //  Image data for game
 // 
 
-const uint_8 gameBitmaps[] =
+const uint8_t gameBitmaps[] =
 {
 	0x07, 0xFC, 0x00, 0xC0, 0x07, 0x00, 0x07, 0x03, 0xFE, //      #########          ##           ###             ###      ######### 
 	0x0F, 0x78, 0x01, 0xC0, 0x03, 0x80, 0x07, 0x01, 0x87, //     #### ####          ###            ###            ###       ##    ###
@@ -105,5 +105,5 @@ const uint_8 gameBitmaps[] =
 };
 
 // Bitmap sizes for game
-const uint_8 gameWidthPixels = 72;
-const uint_8 gameHeightPixels = 46;
+const uint8_t gameWidthPixels = 72;
+const uint8_t gameHeightPixels = 46;

@@ -114,4 +114,6 @@ void lcd_draw_image(uint16_t x_start, uint16_t y_start,
                     uint16_t image_width_pixels, uint16_t image_height_pixels,
                     const uint8_t *image, uint16_t fColor, uint16_t bColor);
 
+
+
 #endif /* LCD_H_ */

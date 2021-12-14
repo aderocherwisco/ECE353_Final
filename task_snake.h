@@ -13,6 +13,8 @@
 extern TaskHandle_t Task_Snake_Handle;
 extern QueueHandle_t Queue_Snake;
 
+extern volatile uint16_t snake_color;
+
 typedef enum
 {
     SNAKE_CMD_LEFT, SNAKE_CMD_RIGHT, SNAKE_CMD_UP, SNAKE_CMD_DOWN, SNAKE_CMD_CENTER,
@@ -36,11 +38,11 @@ void Task_Snake_Init(void);
  * This task manages the movement of the maze. The joystick task or the
  * console task can send messages to the
  ******************************************************************************/
-void Task_Snake(void *pvParameters);
+void Task_Draw_Snake(void *pvParameters);
 
 /******************************************************************************
  * This function will will draw the Snake game
  ******************************************************************************/
-void draw_game(void);
+void draw_fruit(void);
 
 #endif /* TASK_SNAKE_H_ */

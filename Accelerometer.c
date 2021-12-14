@@ -20,11 +20,11 @@ void init_accel(void)
     // Configure ADC to return 12-bit values
     ADC14->CTL1 = ADC14_CTL1_RES_2;
     // Associate the X direction analog signal with MEM[0]
-    ADC14->MCTL[0] = ADC14_MCTLN_INCH_14;
+    ADC14->MCTL[2] = ADC14_MCTLN_INCH_14;
     // Associate the Y direction analog signal with MEM[1]
-    ADC14->MCTL[1] = ADC14_MCTLN_INCH_13;
+    ADC14->MCTL[3] = ADC14_MCTLN_INCH_13;
     // Indicate End-of-Sequence
-    ADC14->MCTL[2] = ADC14_MCTLN_EOS;
+    ADC14->MCTL[4] = ADC14_MCTLN_EOS;
     // Enable interrupts in the ADC AFTER a value is written into MEM[1].
     ADC14->IER0 = ADC14_IER0_IE1;
     // Enable ADC Interrupt in the NVIC

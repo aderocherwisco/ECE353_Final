@@ -7,7 +7,7 @@
 #ifndef ACCELEROMETER_H_
 #define ACCELEROMETER_H_
 
-#include "interrupts.h"
+//#include "interrupts.h"
 #include "msp.h"
 #include <stdint.h>
 #include <stdbool.h>

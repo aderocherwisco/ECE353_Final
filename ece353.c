@@ -433,7 +433,7 @@ void ece353_ADC14_PS2_XY(void)
 
     // Associate the Y direction analog signal with MEM[1]
     // NEW -- Make sure to indicate this is the end of a sequence.
-    ADC14 -> MCTL[1]  = ADC14_MCTLN_INCH_9 | ADC14_MCTLN_EOS;
+    ADC14 -> MCTL[1]  = ADC14_MCTLN_INCH_9 ;
 
 
     // Enable interrupts in the ADC AFTER a value is written into MEM[1].

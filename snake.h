@@ -1,14 +1,20 @@
+#ifndef SNAKE_H_
+#define SNAKE_H_
+
+#include <main.h>
 // Bitmap info for welcome
-extern const uint_8 welcomeBitmaps;
-extern const uint_8 welcomeWidthPixels;
-extern const uint_8 welcomeHeightPixels;
+extern const uint8_t welcomeBitmaps[];
+extern const uint8_t welcomeWidthPixels;
+extern const uint8_t welcomeHeightPixels;
 
 // Bitmap info for snake
-extern const uint_8 snakeBitmaps;
-extern const uint_8 snakeWidthPixels;
-extern const uint_8 snakeHeightPixels;
+extern const uint8_t snakeBitmaps[];
+extern const uint8_t snakeWidthPixels;
+extern const uint8_t snakeHeightPixels;
 
 // Bitmap info for game
-extern const uint_8 gameBitmaps;
-extern const uint_8 gameWidthPixels;
-extern const uint_8 gameHeightPixels;
+extern const uint8_t gameBitmaps[];
+extern const uint8_t gameWidthPixels;
+extern const uint8_t gameHeightPixels;
+
+#endif

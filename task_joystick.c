@@ -13,6 +13,9 @@
 
  volatile uint32_t JOYSTICK_X_DIR = 0;
  volatile uint32_t JOYSTICK_Y_DIR = 0;
+ volatile uint32_t X_SHAKE = 0;
+ volatile uint32_t Y_SHAKE = 0;
+ volatile bool shook = false;
 
 
  /******************************************************************************
@@ -30,7 +33,7 @@
          /* 
           * Delay 50mS
           */
-         vTaskDelay(pdMS_TO_TICKS(50));
+         vTaskDelay(pdMS_TO_TICKS(25));
 
      }
  }
@@ -54,6 +57,21 @@ void Task_Joystick_Bottom_Half(void *pvParameters)
 
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
 
+        if (X_SHAKE > 1750 &&  X_SHAKE < 2250 && Y_SHAKE > 1500 &&  Y_SHAKE < 2250) {
+            shook = false;
+        }
+        else {
+            shook = true;
+        }
+
+        char bufferx[50];
+        snprintf(bufferx,10,"%d",X_SHAKE);
+        char buffery[50];
+        snprintf(buffery,10,"%d",Y_SHAKE);
+        printf(bufferx);
+        printf(" , ");
+        printf(buffery);
+        printf("\n\r");
 
         /*
          * Set the dir variable to one of the following values based
@@ -106,6 +124,8 @@ void ADC14_IRQHandler(void)
 
     JOYSTICK_X_DIR = ADC14->MEM[0]; // Read the value and clear the interrupt
     JOYSTICK_Y_DIR = ADC14->MEM[1]; // Read the value and clear the interrupt
+    X_SHAKE = ADC14->MEM[2];
+    Y_SHAKE = ADC14->MEM[3];
 
 
     /* ADD CODE

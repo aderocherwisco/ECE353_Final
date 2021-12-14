@@ -21,6 +21,8 @@ extern volatile bool gameover;
 extern volatile bool fruit;
 extern volatile int fruitx;
 extern volatile int fruity;
+extern volatile int oldheadx;
+extern volatile int oldheady;
 
 /******************************************************************************
 * Task used to print out messages to the console

@@ -51,6 +51,8 @@ int main(void)
     opt3001_init();
     serial_debug_init();
     ece353_ADC14_PS2_XY();
+    init_accel();
+    Crystalfontz128x128_Init();
     __enable_irq();
 
 
@@ -69,7 +71,7 @@ int main(void)
         "Task_Game_Timer",
         configMINIMAL_STACK_SIZE,
         NULL,
-        1,
+        6,
         &Task_Game_Timer_Handle
     );
 
@@ -78,8 +80,17 @@ int main(void)
         "Task_Game",
         configMINIMAL_STACK_SIZE,
         NULL,
-        2,
+        5,
         &Task_Game_Handle
+    );
+
+    xTaskCreate
+    (   Task_Draw_Snake,
+        "Task_Game",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        4,
+        &Task_Snake_Handle
     );
 
     xTaskCreate
@@ -96,21 +107,23 @@ int main(void)
         "Task_Joystick",
         configMINIMAL_STACK_SIZE,
         NULL,
-        4,
+        2,
         &Task_Joystick_Bottom_Half_Handle
+    );
+    xTaskCreate
+    (   Task_Buzzer,
+        "Task_Buzzer",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        1,
+        &Task_Buzzer_Handle
     );
 
 
         /* Start the FreeRTOS scheduler */
         vTaskStartScheduler();
-    while(1){
-        /* unsigned long int lux = opt3001_read_lux();
-         char buffer[50];
-         ltoa(lux,buffer, 10);
-         printf("Light Level: ");
-         printf(buffer);
-         printf("\n\r");*/
-    };
+
+
     return (0);
 }
 

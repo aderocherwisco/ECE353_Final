@@ -7,10 +7,11 @@
 #ifndef BUZZER_H_
 #define BUZZER_H_
 
-#include "interrupts.h"
+//#include "interrupts.h"
 #include "msp.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include <main.h>
 
 #define NOTE_C3 131
 #define NOTE_D3 147
@@ -36,6 +37,8 @@
 #define NOTE_A5 880
 #define NOTE_B5 988
 
+extern TaskHandle_t Task_Buzzer_Handle;
+
 void init_buzzer(uint16_t ticks_period);
 
 void Buzzer_On(void);
@@ -46,4 +49,6 @@ void changeTone(uint16_t ticks_period);
 
 bool Buzzer_Status(void);
 
+
+void Task_Buzzer(void);
 #endif /* BUZZER_H_ */
