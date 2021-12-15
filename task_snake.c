@@ -115,9 +115,7 @@ void Task_Draw_Snake(void *pvParameters)
             draw_fruit();
         }
 
-        //Add the accelerometer and joystick logic here
-
-        //this is the final game over display, we can add if statements around it
+        //this is the final "game over" display once the snake dies
         if(gameover) {
             lcd_draw_rectangle(LCD_HORIZONTAL_MAX/2, LCD_VERTICAL_MAX/2, LCD_HORIZONTAL_MAX,
                                                    LCD_VERTICAL_MAX, LCD_COLOR_BLACK);
