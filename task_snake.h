@@ -1,8 +1,8 @@
 /*
- * task_snake.h
+ * task_snake.c
  *
  *  Created on: Dec 13, 2021
- *
+ *      Author: Vansh Tyagi
  */
 
 #ifndef TASK_SNAKE_H_
