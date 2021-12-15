@@ -1,11 +1,11 @@
 /*
- * Buzzer.h
+ * task_buzzer.h
  *
  *  Created on: Dec 13, 2021
  *      Author: sstaggs
  */
-#ifndef BUZZER_H_
-#define BUZZER_H_
+#ifndef TASK_BUZZER_H_
+#define TASK_BUZZER_H_
 
 //#include "interrupts.h"
 #include "msp.h"
@@ -51,4 +51,4 @@ bool Buzzer_Status(void);
 
 
 void Task_Buzzer(void);
-#endif /* BUZZER_H_ */
+#endif /* TASK_BUZZER_H_ */
