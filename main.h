@@ -32,12 +32,12 @@
 #include <light_sensor.h>
 #include <serial_debug.h>
 #include <task_joystick.h>
-#include <game.h>
+#include <task_game.h>
 #include <snake.h>
 #include <task_snake.h>
 #include <lcd.h>
 #include <Accelerometer.h>
-#include <Buzzer.h>
+#include <task_buzzer.h>
 
 
 
