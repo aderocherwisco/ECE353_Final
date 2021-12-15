@@ -1,12 +1,12 @@
 /*
- * game.h
+ * task_game.h
  *
  *  Created on: Dec 13, 2021
  *      Author: Aidan Derocher
 */
 
-#ifndef GAME_H_
-#define GAME_H_
+#ifndef TASK_GAME_H_
+#define TASK_GAME_H_
 
 #include <main.h>
 #include <time.h>
@@ -33,4 +33,4 @@ void Task_Game_Timer(void *pvParameters);
 
 
 
-#endif /* GAME_H_ */
+#endif /* TASK_GAME_H_ */
