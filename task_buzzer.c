@@ -1,10 +1,10 @@
 /*
- * Buzzer.c
+ * task_buzzer.c
  *
  *  Created on: Dec 13, 2021
  *      Author: sstaggs
  */
-#include "Buzzer.h"
+#include "task_buzzer.h"
 
  TaskHandle_t Task_Buzzer_Handle;
 
